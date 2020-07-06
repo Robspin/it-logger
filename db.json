@@ -2,8 +2,8 @@
    "logs": [
       {
          "id": 1,
-         "message": "Changed network card in server 007",
-         "attention": false,
+         "message": "Workstation 008 on fire!",
+         "attention": true,
          "tech": "Sam Smith",
          "date": "2019-05-31T15:46:10.179Z"
       },
