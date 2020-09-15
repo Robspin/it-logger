@@ -8,7 +8,6 @@ const Logs = () => {
 
    useEffect(() => {
       getLogs();
-      // eslint-disable-next-
    }, []);
 
    const getLogs = async () => {
