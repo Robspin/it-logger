@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect } from 'react';
 
+import { Provider } from 'react-redux';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import './App.css';
@@ -11,24 +12,28 @@ import AddLogModal from './components/logs/AddLogModal';
 import EditLogModal from './components/logs/EditLogModal';
 import AddTechModal from './components/techs/AddTechModal';
 import TechListModal from './components/techs/TechListModal';
+import store from './store';
 
 const App = () => {
    useEffect(() => {
       // Init Materialize JS
       M.AutoInit();
    });
+
    return (
-      <Fragment>
-         <SearchBar />
-         <div className='container'>
-            <AddBtn />
-            <AddLogModal />
-            <EditLogModal />
-            <AddTechModal />
-            <TechListModal />
-            <Logs />
-         </div>
-      </Fragment>
+      <Provider store={store}>
+         <Fragment>
+            <SearchBar />
+            <div className='container'>
+               <AddBtn />
+               <AddLogModal />
+               <EditLogModal />
+               <AddTechModal />
+               <TechListModal />
+               <Logs />
+            </div>
+         </Fragment>
+      </Provider>
    );
 };
 
